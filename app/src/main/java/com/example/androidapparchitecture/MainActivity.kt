@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidapparchitecture.databinding.ActivityMainBinding
 import com.example.androidapparchitecture.mvp.view.MvpActivity
+import com.example.androidapparchitecture.mvvm.view.MvvmActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
     private fun setupClickListeners() {
         binding.btnMvp.setOnClickListener {
             val mvpIntent = Intent(this, MvpActivity::class.java)
+            startActivity(mvpIntent)
+        }
+
+        binding.btnMvvm.setOnClickListener {
+            val mvpIntent = Intent(this, MvvmActivity::class.java)
             startActivity(mvpIntent)
         }
     }
