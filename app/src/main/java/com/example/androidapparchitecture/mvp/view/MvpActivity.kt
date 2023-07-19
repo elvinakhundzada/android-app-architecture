@@ -21,16 +21,19 @@ class MvpActivity : AppCompatActivity(), MvpMovieContract.MvpView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setupBinding()
-
-        setSupportActionBar(binding.tbMovies)
-        supportActionBar!!.setHomeButtonEnabled(true)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-
+        setupActionBar()
         setupAdapter()
         setupPresenter()
 
         fetchMovies()
+    }
+
+    private fun setupActionBar() {
+        setSupportActionBar(binding.tbMovies)
+        supportActionBar!!.setHomeButtonEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun setupBinding() {
