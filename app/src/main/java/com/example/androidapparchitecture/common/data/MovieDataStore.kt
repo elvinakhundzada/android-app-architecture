@@ -21,25 +21,8 @@ class MovieDataStore {
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()
-
-
+    
     private var mMoviesApi: MovieApi = mRetrofit.create(MovieApi::class.java)
 
-    private var moviesList = arrayListOf(
-        MovieUiModel("The Shawshank Redemption", "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg", "9.3")
-    )
-
     suspend fun fetchMovies() = mMoviesApi.fetchMovies()
-
-    fun getMovies(): List<MovieUiModel> {
-        return moviesList
-    }
-
-    private fun getItemAt(index: Int): MovieUiModel {
-        return moviesList[index]
-    }
-
-    private fun clearMovies() {
-        moviesList.clear()
-    }
 }
