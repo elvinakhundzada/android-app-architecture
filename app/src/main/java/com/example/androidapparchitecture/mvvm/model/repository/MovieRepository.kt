@@ -6,5 +6,5 @@ class MovieRepository {
 
     private val dataStore = MovieDataStore()
 
-    fun getMovies() = dataStore.getMovies()
+    suspend fun getMovies() = dataStore.fetchMovies()
 }

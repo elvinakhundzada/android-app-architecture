@@ -24,6 +24,7 @@ android {
         properties.load(project.rootProject.file("local.properties").inputStream())
 
         buildConfigField("String", "API_KEY", properties.getProperty("API_KEY"))
+        buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL"))
     }
 
     buildTypes {
@@ -63,6 +64,8 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.1.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
 
     testImplementation("junit:junit:4.13.2")

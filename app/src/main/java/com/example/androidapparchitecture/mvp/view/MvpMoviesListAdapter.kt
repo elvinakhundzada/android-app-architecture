@@ -41,7 +41,7 @@ class MvpMoviesListAdapter(private val context: Context): RecyclerView.Adapter<M
 
             Glide.with(itemView).load(movie.imagePath).into(binding.ivMoviePoster)
             binding.tvMovieTitle.text = movie.title
-            binding.tvMovieRating.text = movie.rating.toString()
+            binding.tvMovieReleaseYear.text = movie.rating.toString()
         }
     }
 }

@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.androidapparchitecture.R
-import com.example.androidapparchitecture.common.ui.model.Movie
+import com.example.androidapparchitecture.common.ui.model.MovieUiModel
 import com.example.androidapparchitecture.databinding.MovieListItemLayoutBinding
 
 class MoviesListAdapter(private val context: Context): RecyclerView.Adapter<MoviesListAdapter.MovieViewHolder>() {
 
-    private var movieList: ArrayList<Movie> = arrayListOf()
+    private var movieUiModelList: ArrayList<MovieUiModel> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
        val itemView = LayoutInflater.from(context).inflate(R.layout.movie_list_item_layout, parent, false)
@@ -20,15 +20,15 @@ class MoviesListAdapter(private val context: Context): RecyclerView.Adapter<Movi
         return MovieViewHolder(itemView)
     }
 
-    override fun getItemCount() = movieList.size
+    override fun getItemCount() = movieUiModelList.size
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bind(movieList[position])
+        holder.bind(movieUiModelList[position])
     }
 
-    fun setMovies(movieList: List<Movie>) {
-        this.movieList.clear()
-        this.movieList.addAll(movieList)
+    fun setMovies(movieUiModelList: List<MovieUiModel>) {
+        this.movieUiModelList.clear()
+        this.movieUiModelList.addAll(movieUiModelList)
         notifyDataSetChanged()
     }
 
@@ -36,12 +36,12 @@ class MoviesListAdapter(private val context: Context): RecyclerView.Adapter<Movi
 
         private lateinit var binding: MovieListItemLayoutBinding
 
-        fun bind(movie: Movie) {
+        fun bind(movieUiModel: MovieUiModel) {
             binding = MovieListItemLayoutBinding.bind(itemView)
 
-            Glide.with(itemView).load(movie.imagePath).into(binding.ivMoviePoster)
-            binding.tvMovieTitle.text = movie.title
-            binding.tvMovieRating.text = movie.rating.toString()
+            Glide.with(itemView).load(movieUiModel.poster).into(binding.ivMoviePoster)
+            binding.tvMovieTitle.text = movieUiModel.title
+            binding.tvMovieReleaseYear.text = movieUiModel.year
         }
     }
 }

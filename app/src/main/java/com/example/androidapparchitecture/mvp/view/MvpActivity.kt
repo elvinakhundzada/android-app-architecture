@@ -11,7 +11,6 @@ import com.example.androidapparchitecture.mvp.contract.MvpMovieContract
 import com.example.androidapparchitecture.mvp.model.MvpMovie
 import com.example.androidapparchitecture.mvp.presenter.MvpMoviePresenter
 
-
 class MvpActivity : AppCompatActivity(), MvpMovieContract.MvpView {
 
     private lateinit var binding: ActivityMvpBinding

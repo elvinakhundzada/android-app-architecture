@@ -1,7 +1,7 @@
 package com.example.androidapparchitecture.common.ui.model
 
-data class Movie (
+data class MovieUiModel (
     val title: String,
-    val imagePath: String,
-    val rating: Double
+    val poster: String,
+    val year: String
 )
