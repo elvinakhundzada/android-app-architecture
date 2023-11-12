@@ -1,4 +1,4 @@
-package com.example.androidapparchitecture.mvp.model
+package com.example.androidapparchitecture.common.data
 
 import com.example.androidapparchitecture.common.ui.model.Movie
 

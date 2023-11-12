@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidapparchitecture.R
 import com.example.androidapparchitecture.common.ui.adapter.MoviesListAdapter
 import com.example.androidapparchitecture.databinding.ActivityMvvmBinding
 import com.example.androidapparchitecture.mvvm.viewmodel.MovieViewModel

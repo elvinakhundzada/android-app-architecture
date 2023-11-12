@@ -1,6 +1,6 @@
 package com.example.androidapparchitecture.mvvm.model.repository
 
-import com.example.androidapparchitecture.mvp.model.MovieDataStore
+import com.example.androidapparchitecture.common.data.MovieDataStore
 
 class MovieRepository {
 
