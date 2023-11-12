@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.androidapparchitecture"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.androidapparchitecture"
@@ -52,6 +52,8 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
 
 
     testImplementation("junit:junit:4.13.2")
