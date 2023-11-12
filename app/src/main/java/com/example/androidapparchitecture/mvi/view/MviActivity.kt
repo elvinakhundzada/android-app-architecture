@@ -1,4 +1,4 @@
-package com.example.androidapparchitecture.mvi
+package com.example.androidapparchitecture.mvi.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidapparchitecture.common.ui.adapter.MoviesListAdapter
 import com.example.androidapparchitecture.databinding.ActivityMviBinding
-import com.example.androidapparchitecture.databinding.ActivityMvvmBinding
 import com.example.androidapparchitecture.mvvm.viewmodel.MovieViewModel
 
 class MviActivity : AppCompatActivity() {

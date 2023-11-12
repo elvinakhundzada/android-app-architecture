@@ -16,8 +16,13 @@
         android:theme="@style/Theme.AndroidAppArchitecture"
         tools:targetApi="31">
         <activity
+            android:name=".mvi.view.MviActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".mvvm.view.MvvmActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".mvp.view.MvpActivity"
             android:exported="false"
