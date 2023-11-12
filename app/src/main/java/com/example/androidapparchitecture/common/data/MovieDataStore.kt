@@ -21,7 +21,7 @@ class MovieDataStore {
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()
-    
+
     private var mMoviesApi: MovieApi = mRetrofit.create(MovieApi::class.java)
 
     suspend fun fetchMovies() = mMoviesApi.fetchMovies()
