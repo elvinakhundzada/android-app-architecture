@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidapparchitecture.common.ui.adapter.MoviesListAdapter
 import com.example.androidapparchitecture.databinding.ActivityMviBinding
+import com.example.androidapparchitecture.mvi.viewmodel.MviViewModel
 import com.example.androidapparchitecture.mvvm.viewmodel.MovieViewModel
 
 class MviActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MviActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMviBinding
     private lateinit var adapter: MoviesListAdapter
 
-    private lateinit var viewModel: MovieViewModel
+    private lateinit var viewModel: MviViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -44,13 +45,9 @@ class MviActivity : AppCompatActivity() {
         binding.rvMovies.adapter = adapter
     }
     private fun setupViewModel() {
-        viewModel = ViewModelProvider(this) [MovieViewModel::class.java]
-
-        viewModel.moviesLiveData().observe(this ) {
-            adapter.setMovies(it)
-        }
+        viewModel = ViewModelProvider(this) [MviViewModel::class.java]
     }
     private fun fetchMovies(){
-        viewModel.fetchMovies()
+
     }
 }
